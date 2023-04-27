@@ -250,10 +250,19 @@
     transform: translateY(120%);
     animation-name:moveDownToUp;
     animation-duration: 1s;
-    animation-fill-mode: forwards;
 }
 
-.ani-fadeIn-leftToRight{}
+.ani-fadeIn-leftToRight{
+    transform: translateX(-100%);
+    animation-name:ani-fadeIn-leftToRight;
+    animation-duration: .3s;
+    opacity: 0;
+ 
+}
+
+.ani-move-downToUp, .ani-fadeIn-leftToRight{
+       animation-fill-mode: forwards;
+}
 
 .ani-delay-1{
     animation-delay: 0.3s;
@@ -264,32 +273,38 @@
 }
 
 .ani-delay-3{
-    animation-delay: 0.9s;
+    animation-delay: 0.6s;
 }
 
 .ani-delay-4{
-    animation-delay: 1s;
+    animation-delay: 0.9s;
 }
 
 .ani-delay-5{
-    animation-delay: 1.s;
+    animation-delay: 1s;
 }
 
 .ani-delay-6{
-    animation-delay: 1.3s;
+    animation-delay: 1.2s;
 }
 
 .ani-delay-7{
-    animation-delay: 1.4s;
+    animation-delay: 1.3s;
 }
 
 
 @keyframes moveDownToUp{
-    from {
-        transform: translateY(120%)
-    }
+    
     to {
         transform: translateY(0)
+    }
+}
+
+@keyframes ani-fadeIn-leftToRight{
+    
+    to{
+        transform: translateX(0);
+        opacity: 1;
     }
 }
 
